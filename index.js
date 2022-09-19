@@ -164,4 +164,19 @@ console.log('\nTemplate Literals')
 // string Literal : '' , ""
 // Template Literal : ``
 
-// in template literal there is no need to use \n 
+// in template literal there is no need to use \n for new line just press enter for new line
+const templateLiteral = `This is how using 
+Template literal for new line. We can use every notation by using original
+sign like 'Single quote', "Double Quote" etc.`;
+console.log(templateLiteral);
+
+console.log('Another Example of template Literal')
+const templateName = 'Waqas';
+const anotherTemplate = `
+Hi ${templateName},
+
+Thank you for Loading my mailing list.
+
+regards,
+Zeeshan.`;
+console.log(anotherTemplate);
