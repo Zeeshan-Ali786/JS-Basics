@@ -31,7 +31,7 @@ console.log(intrestPrice);
 let myName = 'Zeeshan';       //string literal
 let age = 20;                 //Number Literal
 let isApproved = true;       //Boolean
-let fname = undefined;       //if you font give it value it also undefined
+let fname = undefined;       //if you dont give it value it also undefined
 let lNmae = null;
 
 //REFRENCE TYPE   Objects, Array and Functions
@@ -61,6 +61,32 @@ console.log(selectedColor[1]);   //color in index one is green and index 0 is re
 
 console.log('Length of Array is ',selectedColor.length);   // this property returns number of items and length in a array
 
+// Another EXample of Array
+const numbers = [1, -1, 2, 3];
+let sum = 0;
+for(let n of numbers)
+    sum += n;
+console.log('Sum = ', sum)
+// OR
+const add = numbers.reduce(
+    (accumilator, currentValue) => accumilator +currentValue
+);
+console.log("(Using Reduce function) Sum = ", add)
+
+// Filtering an Array
+console.log('Filtering an Array');
+const filtered = numbers.filter(n => n >= 0);  
+console.log('Filter Array (PositiveValus) = ' , filtered)
+//filter function is use in reasl life like if you search opened resturents of all available returents available in array then if filter the timing of all resturents and display all opened resturents
+
+// Mapping An Array
+console.log('Mapping An Array')
+const mappedItems= numbers
+        .filter(n => n >= 0)
+        .map(n => ({value: n}))
+        .filter(obj => obj.value > 1)
+        .map(obj => obj.value);
+console.log('Mapping an array = ', mappedItems)
 
 // FUNCTIONS
 console.log('FUNCTIONS');
@@ -77,4 +103,39 @@ console.log('This Function Calculating a value')
 function square(numberSquare){
     return numberSquare * numberSquare;
 }
-console.log(square(3))
+console.log(square(3))   //here 2 functions defines one is cnsole and second is square
+
+// Bitwise OPerator
+console.log('BITWISE OPERATOR')
+// console.log(1 || 2); //logical OR
+console.log('Bitwise OR = ' , 1 | 2); //bitwise OR
+// 1 = 00000001
+// 2 = 00000010
+// Bitwise Or(Plus) = 00000011   (that is equal to 3)
+
+console.log('Bitwise AND = ' , 1 & 2); //bitwise AND
+// 1 = 00000001
+// 2 = 00000010
+// Bitwise Or(mul) = 00000000   (that is equal to 0)
+
+// Real Life Example
+// Read(00000100 = 4), Write(00000010 = 2), Execute(00000001 = 1)
+const readPermission = 4;
+const writePermission = 2;
+const executePermission = 1;
+let myPermission = 0;
+myPermission = myPermission | readPermission | writePermission;
+let message = (myPermission & readPermission) ? 'Yes' : 'No';
+console.log(message)
+
+// Let vs Var
+//var => function-scoped
+//let, const => block-scoped
+function start(){
+    for(let i=0; i<5; i++){
+        console.log(i);
+    }
+    // console.log(i)    if we use var instead of let these two console will work bcz var is global/function scoped
+}
+start()
+
