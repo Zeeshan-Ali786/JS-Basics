@@ -34,6 +34,27 @@ let isApproved = true;       //Boolean
 let fname = undefined;       //if you dont give it value it also undefined
 let lNmae = null;
 
+// Another Example of Object type and refrence type
+// Value Type
+console.log('Value Type')
+let objt = 10;
+function increace(objt){
+    objt++;
+}
+increace(objt)
+console.log(objt)
+
+// Refrence type
+console.log('Refrence type')
+objt = {value : 10};
+function increace(objt){
+    objt.value++;
+}
+increace(objt)
+console.log(objt)
+
+
+
 //REFRENCE TYPE   Objects, Array and Functions
 console.log('REFRENCE TYPE')
 // Objects       //{}  this bracket is object literal
@@ -180,3 +201,77 @@ Thank you for Loading my mailing list.
 regards,
 Zeeshan.`;
 console.log(anotherTemplate);
+
+// Using this Keyword here
+console.log(`
+            Using this Keyword here`)
+const video = {
+    title: 'a',
+    tags : ['a','b','c'],
+    showTag(){
+        this.tags.forEach(function(tag){
+            console.log(this.title,tag);
+        },this);
+    }
+};
+video.showTag()
+
+// Local vs Global Scope
+const messageGlobal = `this is global variable and can use everywhere inside code`
+function localStart() {
+    const messageLocal = `This message only use inside this function block
+so this have local scope`;
+    console.log(messageLocal)
+    console.log(messageGlobal)
+}
+localStart()
+// console.log(messageLocal)     local variable can only use inside block where it is defined
+
+
+// Getters And Setters
+console.log('Getters And Setters');
+// by  using get get rid of using functionName() inside console use functioName like an property not like a function
+// getter => access properties
+// setter => change and mutate them
+
+const per = {
+    perFirstname : 'Mosh',
+    perLastname : 'Hamedani',
+    get fullName(){
+        return `${per.perFirstname} ${per.perLastname}`
+    },
+    set fullName(val){
+        const part = val.split(' ');
+        this.firstName = part[0];
+        this.lastName = part[1];
+    }
+}
+
+per.fullName = 'Zeeshan Ali'
+// console.log(per.fullName())
+console.log(per.fullName)   //by using get before func name inside per object it access fullname like a property not like a function
+console.log(per) //whenever you want to change full name you can use setter property
+
+
+// Loops
+console.log('Loops')
+// For
+console.log("For Loop");
+for(let i = 1; i <= 5; i++){
+    console.log('let i = 1; (intialExpresion) , i <= 5; (Condition) and i++ (incrementExpresion)',i)
+}
+console.log(`
+Reverce for loop`)
+for(let i = 5; i >= 1; i--){
+    console.log('For Loop in reverse Order',i)
+}
+console.log(`
+Odd number `)
+for(let i = 1; i <= 5; i++){
+    if(i % 2 !== 0) console.log(i);   //if the reminder of i/2 is not 0 that means i is an odd number   
+}
+console.log(`
+Even number `)
+for(let i = 1; i <= 5; i++){
+    if(i % 2 == 0) console.log(i);   //if the reminder of i/2 is equal to 0 that means i is an even number   
+}
