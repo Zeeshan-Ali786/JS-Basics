@@ -137,5 +137,31 @@ function start(){
     }
     // console.log(i)    if we use var instead of let these two console will work bcz var is global/function scoped
 }
-start()
+start();
 
+// Strings
+console.log('String')
+// String Primitives
+const stringPrimitives = 'This is String Primitive';
+console.log(stringPrimitives);
+
+// string Object
+const stringObject = new String('typeof this string is object');
+console.log(stringObject);
+
+// escape Notations
+console.log('Escape Notation in String')
+console.log('This is how using \'Single Quote\'')
+console.log('This is how using \"Double Quote\"')
+console.log('This is how using \\BackSlash')
+console.log('This is how using \tTab')
+console.log('This is how using \nNew Line')
+
+// Template Literals
+console.log('\nTemplate Literals')
+//object Literal  : {}
+// Boolean Literal : true, false
+// string Literal : '' , ""
+// Template Literal : ``
+
+// in template literal there is no need to use \n 
