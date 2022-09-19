@@ -4,7 +4,8 @@ console.log('Hello World')
 let name = 'Zeeshan';
 console.log(name);
                             // VARIABLES
-                            console.log('VARIABLES')
+console.log(`
+VARIABLES`)
 //Rules for naming variables 
 //the variable name cannot be a reserved keyword name like if let etc    // let if = 'zeeshan'
 // And variable name also should be meaningfull like a, b, x, y, a1, b1 thess are not meaning full variables
@@ -16,7 +17,8 @@ let firstName = 'Zeeshan', lastName = 'Ali';
 console.log(firstName,lastName)
 
                             // CONSTANT
-                            console.log('CONSTANT')
+console.log(`
+CONSTANT`)
 let intrestRate = 0.5;
 intrestRate = 1;
 console.log(intrestRate);
@@ -36,7 +38,8 @@ let lNmae = null;
 
 // Another Example of Object type and refrence type
 // Value Type
-console.log('Value Type')
+console.log(`
+Value Type`)
 let objt = 10;
 function increace(objt){
     objt++;
@@ -45,7 +48,8 @@ increace(objt)
 console.log(objt)
 
 // Refrence type
-console.log('Refrence type')
+console.log(`
+Refrence type`)
 objt = {value : 10};
 function increace(objt){
     objt.value++;
@@ -127,7 +131,8 @@ function square(numberSquare){
 console.log(square(3))   //here 2 functions defines one is cnsole and second is square
 
 // Bitwise OPerator
-console.log('BITWISE OPERATOR')
+console.log(`
+BITWISE OPERATOR`)
 // console.log(1 || 2); //logical OR
 console.log('Bitwise OR = ' , 1 | 2); //bitwise OR
 // 1 = 00000001
@@ -161,7 +166,8 @@ function start(){
 start();
 
 // Strings
-console.log('String')
+console.log(`
+String`)
 // String Primitives
 const stringPrimitives = 'This is String Primitive';
 console.log(stringPrimitives);
@@ -179,7 +185,8 @@ console.log('This is how using \tTab')
 console.log('This is how using \nNew Line')
 
 // Template Literals
-console.log('\nTemplate Literals')
+console.log(`
+Template Literals`)
 //object Literal  : {}
 // Boolean Literal : true, false
 // string Literal : '' , ""
@@ -217,6 +224,8 @@ const video = {
 video.showTag()
 
 // Local vs Global Scope
+console.log(`
+Local vs Global Scope`)
 const messageGlobal = `this is global variable and can use everywhere inside code`
 function localStart() {
     const messageLocal = `This message only use inside this function block
@@ -229,7 +238,8 @@ localStart()
 
 
 // Getters And Setters
-console.log('Getters And Setters');
+console.log(`
+Getters And Setters`);
 // by  using get get rid of using functionName() inside console use functioName like an property not like a function
 // getter => access properties
 // setter => change and mutate them
@@ -254,7 +264,8 @@ console.log(per) //whenever you want to change full name you can use setter prop
 
 
 // Loops
-console.log('Loops')
+console.log(`
+Loops`)
 // For
 console.log("For Loop");
 for(let i = 1; i <= 5; i++){
@@ -275,3 +286,21 @@ Even number `)
 for(let i = 1; i <= 5; i++){
     if(i % 2 == 0) console.log(i);   //if the reminder of i/2 is equal to 0 that means i is an even number   
 }
+
+// If-else Statment
+console.log(`
+If-else Statement `)
+//Hour
+//If hour is betweeen 6am to 12pm: Good Morning!
+//If hour is betweeen 12pm to 6am: Good Afternoon!
+//Otherwise: Good evening!
+
+let hour = 10;
+if(hour >= 6 && hour < 12)
+    console.log('Good Morning!')
+else if(hour >= 12 && hour < 17)
+    console.log('Good Afternoon!')
+else if(hour >= 17 && hour < 21)
+    console.log('Good Evening!')
+else
+    console.log('Good Night!')
