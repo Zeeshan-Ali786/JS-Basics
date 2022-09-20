@@ -36,7 +36,7 @@ let isApproved = true;       //Boolean
 let fname = undefined;       //if you dont give it value it also undefined
 let lNmae = null;
 
-// Another Example of Object type and refrence type
+// Another Example of VAlue type and refrence type
 // Value Type
 console.log(`
 Value Type`)
@@ -323,4 +323,49 @@ console.log('cloneHere = ', cloneHere);
 // Method 2
 const anotherCloneMethod = {...objectClone}    //... this is spread operator 
 console.log('anotherCloneMethod = ', anotherCloneMethod);
+
+
+//Object-Oriented Programing in JavaScript
+console.log(`
+Object Literals {} is the way to define a object`)
+let circle = {
+    radius : 1,
+    location:{
+        x:1,
+        y:1
+    },
+    draw: function(){
+        console.log('draw');
+    }
+};
+circle.draw();
+
+console.log(`
+we have two move ways to define an object
+1. Factory Function`)
+function createCircle(radius){
+    return{
+        radius,
+    draw: function(){
+        console.log('draw using factory function');
+    }
+    };
+}
+circle = createCircle(2)
+circle.draw();
+
+console.log(`
+2. Constructor Function`)
+function Circle(radius){      //first word of constructor function should be uppercase
+    this.radius = radius,
+    this.draw = function(){
+            console.log('draw using COnstructor Function')
+        }   
+}
+const anotherCircle = new Circle(3)
+console.log('Radius : ',anotherCircle.radius);
+anotherCircle.draw()
+//constructors
+// new String(); this is built in string constructor but instead of this we are using string literals like '',"",``
+
 
