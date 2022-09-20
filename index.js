@@ -369,3 +369,61 @@ anotherCircle.draw()
 // new String(); this is built in string constructor but instead of this we are using string literals like '',"",``
 
 
+// refrence type and value type call
+console.log(`
+refrence type and value type call`)
+console.log(`1. value type call`)
+let x = 10;            //premitive x
+let y = x;         //premitive y
+
+x = 20;
+console.log('x = ',x);
+console.log('y = ',y);
+console.log(`I changed the value of x and y equals to x but value of y dont change
+because x and y is completely independent to each other and value of x store inside it and assign to y`)
+
+console.log(`
+2.Refrence type call`);
+let a = { value:10 };
+let b = a;
+
+a.value = 20;
+console.log('a = ', a);
+console.log('b = ', b);
+console.log(`The value of a and b  is same now whenever I changed the value of a
+because I make 'a' an Object and value of object not store in 'a' but it store in memory
+and addres of that memory location store inside 'a' so when we copy 'a' into 'b' then address and refrence would be copied`)
+
+console.log(`
+Conclution : Premitives are Copied by Value & Objects are copied by refrence`)
+
+// Adding or Removing properties
+console.log(`
+Adding or Removing properties`)
+console.log(`Adding properties :`)
+function Circle1(radius){      //first word of constructor function should be uppercase
+    this.radius = radius,
+    this.draw = function(){
+            console.log('draw using COnstructor Function')
+        }   
+}
+const circle1 = new Circle1(4);
+circle1.location1 = { x: 4, y: 4}  //location added by using dot property
+console.log('Location added by using dot property')
+console.log(circle1)
+
+// circle1.center-location = {x:1}     this type of case we use bracket notaton when preperty name is special
+const propertyName = 'center-location';
+circle1[propertyName] = {x:5};
+console.log('propertyName added by using Bracket property')
+console.log(circle1)
+
+console.log(`
+Delete Property :`)
+delete circle1.location1;
+console.log('Location deleted by using dot delete property property')
+console.log(circle1);
+
+delete circle1['propertyName'];
+console.log('propertyName deleted by using Bracket delete property property')
+console.log(circle1);
