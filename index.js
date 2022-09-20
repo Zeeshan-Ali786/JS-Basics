@@ -304,3 +304,23 @@ else if(hour >= 17 && hour < 21)
     console.log('Good Evening!')
 else
     console.log('Good Night!')
+
+
+console.log(`
+Cloning an Object `)
+const objectClone = {
+    cloneName : 'Zeeshan',
+    cloneAge : '22',
+    cloneFunc(){
+        console.log('Clone Function')
+    }
+}
+console.log('objectclone = ', objectClone);    
+//If you want to take all properties of objectCLone object so we have different metheds
+// Method 1
+const cloneHere = Object.assign({},objectClone);
+console.log('cloneHere = ', cloneHere);
+// Method 2
+const anotherCloneMethod = {...objectClone}    //... this is spread operator 
+console.log('anotherCloneMethod = ', anotherCloneMethod);
+
