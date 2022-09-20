@@ -424,6 +424,19 @@ delete circle1.location1;
 console.log('Location deleted by using dot delete property property')
 console.log(circle1);
 
-delete circle1['propertyName'];
+delete circle1[propertyName];
 console.log('propertyName deleted by using Bracket delete property property')
 console.log(circle1);
+
+// Enumirating Properties
+console.log(`
+Enumirating Properties`)
+// using previus construction function here
+console.log(`To enumirate all the members in an object we can use 'for in loop'.`) 
+for(let key in circle1){
+    if(typeof circle1[key] !== 'function')
+    console.log(key, circle1[key])
+}
+console.log(`To check the axistance of the property in a method then use 'in' operator.`)
+if('radius' in circle1)
+    console.log('Circle has Radius.')
