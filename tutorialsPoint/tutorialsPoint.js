@@ -223,3 +223,18 @@ function typeOfOperator2(x){
 }
 typeOfOperator2(3);
 
+                        // if-else Statement
+document.write(`<h1 style="text-align:center;">if-else Statement</h1>`)
+let car = "BMW";
+if (car == "BMW"){
+    document.write("Car Name : BMW")
+} else if(car == "Corola"){
+    document.write("Car Name : Corola")
+}else if(car == "Land Cruiser"){
+    document.write("Car Name : Land Cruiser")
+}else if(car == "KIA"){
+    document.write("Car Name : KIA")
+}else{
+    document.write("There is no Car here!")
+}
+
