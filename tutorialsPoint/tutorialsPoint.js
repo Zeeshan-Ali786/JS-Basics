@@ -7,6 +7,7 @@ function sayHello(){
     alert('Hello World')
 }
 
+                        // Variables
 document.write(`<h1 style="text-align:center;">Variables</h1>`);
 // global or local variable
 var globalVar = "Global";
@@ -23,7 +24,7 @@ document.write(lineBreak)
 // document.write(localVar)     local variable cant access outside function bcz scope of local variable only inside function chekscope()
 document.write("<strong>local variable cant access outside function bcz scope of local variable only inside function chekscope()</strong>")
 
-// Operators +, *, /, %, ++(increment), --(decrement)
+                        // Operators +, *, /, %, ++(increment), --(decrement)
 document.write(`<h1 style="text-align:center;">Operators</h1>`);
 
 // Arithemetic Operators
@@ -214,3 +215,11 @@ function typeOfOperator1(x,y){
     document.write(lineBreak);
 }
 typeOfOperator1(2,3);
+// example 3
+function typeOfOperator2(x){
+    const resulttop2 = (typeof x == 'string') ? "X is String" : "X is Numeric";
+    document.write("<strong>Typeof Operator</strong> (type of x) = ",resulttop2);
+    document.write(lineBreak);
+}
+typeOfOperator2(3);
+
