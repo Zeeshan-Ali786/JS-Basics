@@ -227,14 +227,49 @@ typeOfOperator2(3);
 document.write(`<h1 style="text-align:center;">if-else Statement</h1>`)
 let car = "BMW";
 if (car == "BMW"){
-    document.write("Car Name : BMW")
+    document.write("Car Name : <b>BMW</b>")
 } else if(car == "Corola"){
-    document.write("Car Name : Corola")
+    document.write("Car Name : <b>Corola</b>")
 }else if(car == "Land Cruiser"){
-    document.write("Car Name : Land Cruiser")
+    document.write("Car Name : <b>Land Cruiser</b>")
 }else if(car == "KIA"){
-    document.write("Car Name : KIA")
+    document.write("Car Name : <b>KIA</b>")
 }else{
-    document.write("There is no Car here!")
+    document.write("<b>There is no Car here!</b>")
 }
 
+                        // Switch Case
+document.write(`<h1 style="text-align:center;">Switch Case</h1>`)
+let grade = "B";
+document.write("<p>Entering switch block</p>");
+switch(grade){
+    case 'A+' : document.write("<b>Exellent Job</b>");
+    break;
+    case 'A' : document.write("<b>Good job</b>");
+    break;
+    case 'B' : document.write("<b>Preety Job</b>");
+    break;
+    case 'C' : document.write("<b>Passed</b>");
+    break;
+    case 'D' : document.write("<b>Not so Good</b>");
+    break;
+    case 'F' : document.write("<b>Failed</b>");
+    break;
+    default: document.write("Unknown Grade")
+}
+document.write("<p>Exiting switch block</p>");
+
+// switch case without using breake statement
+document.write("<h3>Switch case without using breake statement</h3>")
+let Grade = "A+";
+document.write("<p>Entering switch block</p>");
+switch(Grade){
+    case 'A+' : document.write("<b>Exellent Job</b><br>");
+    case 'A' : document.write("<b>Good job</b><br>");
+    case 'B' : document.write("<b>Preety Job</b><br>");
+    case 'C' : document.write("<b>Passed</b><br>");
+    case 'D' : document.write("<b>Not so Good</b><br>");
+    case 'F' : document.write("<b>Failed</b><br>");
+    default: document.write("Unknown Grade")
+}
+document.write("<p>Exiting switch block</p>");
