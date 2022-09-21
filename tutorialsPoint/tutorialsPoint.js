@@ -273,3 +273,28 @@ switch(Grade){
     default: document.write("Unknown Grade")
 }
 document.write("<p>Exiting switch block</p>");
+
+
+                        //While Loop 
+document.write(`<h1 style="text-align:center;">While Loop</h1>`)
+let count = 0;
+// statement is to be execite if expression is true
+document.write("Starting Loop<br>")
+while(count < 10){    //expression
+    document.write("Current Count : " + count + "<br />");   //statement
+    count++;
+}
+document.write("Loop Stoped");
+
+                        // Do While
+document.write(`<h1 style="text-align:center;">Do While Loop</h1>`)
+// in do while loop condition is check at the end thats why loop would always execute at least once
+let doCount = 10;
+document.write("Starting Loop<br>")
+do{    //expression
+    document.write("Current Count : " + doCount + "<br />");   //statement
+    doCount++;
+}while(doCount < 5)
+document.write("Loop Stoped<br>");
+document.write(`In do while loop condition is check at the end thats why loop would always execute at least once.
+Means i give count value 10 but it is not less then 5 but statement is executed once before checking while condition`)
