@@ -141,6 +141,24 @@ function redirect(){
 //  document.write("You will be redirected to main page in 10 sec.");
 //  setTimeout('Redirect()', 10000);
 
+
+                        // Dialog Boxes
+// Confermation Dialog box
+function getConfirmation(){
+    let getVal = confirm("Do you want to Continue?");
+    if(getVal == true){
+        document.write("User Wants To Continue");
+        return true;
+    }else{
+        document.write('User Does not Want to Continue');
+    }
+}
+//prompt Didalog Box
+function promptConfirmation(){
+    let getprompt = prompt("Enetr your Name : ", "Your Name Here");
+    document.write("You have enetred : ",getprompt)
+    
+}
                         // Variables
 document.write(`<h1 style="text-align:center;">Variables</h1>`);
 // global or local variable
