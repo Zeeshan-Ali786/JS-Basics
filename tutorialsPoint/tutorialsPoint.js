@@ -292,9 +292,79 @@ document.write(`<h1 style="text-align:center;">Do While Loop</h1>`)
 let doCount = 10;
 document.write("Starting Loop<br>")
 do{    //expression
-    document.write("Current Count : " + doCount + "<br />");   //statement
+    document.write("Current Count : " + doCount + lineBreak);   //statement
     doCount++;
 }while(doCount < 5)
 document.write("Loop Stoped<br>");
 document.write(`In do while loop condition is check at the end thats why loop would always execute at least once.
 Means i give count value 10 but it is not less then 5 but statement is executed once before checking while condition`)
+
+                        // For Loop
+document.write(`<h1 style="text-align:center;">For Loop</h1>`)
+
+for(let i=0; i<=5; i++){  //expression
+    document.write("Current Value = ",i,lineBreak)    //condition
+}
+
+                        // For in Loop
+document.write(`<h1 style="text-align:center;">For in Loop</h1>`)
+let obj = {
+    objName : "Zeeshan",
+    objAge : 20,
+    dob:function(){
+        document.write('7 April')
+    },
+    hobby:function(){
+        document.write('Cricket')
+    }
+}
+// In this example for in loop is use to find keys/values in object
+// for in loop
+for(let key in obj){
+    if(typeof obj[key] !== 'function')    //function key is not shown here
+    document.write(key);
+    document.write(lineBreak)
+}
+// Anothor example of for in loop
+// document.write('<h4>Example 2</h4>')
+// for(let key1 in navigator){
+//     document.write(key1);
+//     document.write(lineBreak);
+// }
+
+                        // Loop Control
+document.write(`<h1 style="text-align:center;">Loop Control</h1>`);
+// the break statement
+document.write('<h4>The Break Statement</h4>');
+let xBreak = 0;
+while(xBreak < 20){
+    if(xBreak == 6){
+        break;
+    }
+    xBreak += 1;
+    document.write(xBreak,lineBreak);
+}
+// the continue statement
+document.write('<h4>Continue Statement</h4>');
+xBreak = 1;
+while(xBreak < 10){
+    xBreak += 1;
+    if(xBreak == 5){
+        continue;
+    }
+    document.write(xBreak);
+    document.write(lineBreak);
+}
+// Using Labels to Control the Flow
+document.write('<h4>Using Labels to Control the Flow</h4>');
+outerloop: //Label Name
+for(let i = 0; i <= 5; i++){
+    document.write('OuterLoop = ',i,lineBreak);
+    innerloop:
+    for(let j = 0; j < 5; j++){
+        if(j == 3) break;
+        if(i == 2) break innerloop;
+        if(i == 4) break outerloop;
+        document.write("InnerLoop = ",j,lineBreak);
+    }
+}
