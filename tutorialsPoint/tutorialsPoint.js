@@ -368,3 +368,27 @@ for(let i = 0; i <= 5; i++){
         document.write("InnerLoop = ",j,lineBreak);
     }
 }
+
+                        // Functions
+document.write(`<h1 style="text-align:center;">Functions</h1>`);
+// calling a function
+// document.write("<h4>calling a function</h4>")
+function callFunc(){
+    document.write("Calling a function from java script")
+}
+// Function parameters
+// document.write('<h4>Function Parameters</h4>');
+function callPara(x,y){
+    document.write('My Name is ',x,' ',y);
+}
+// the return Statement
+function concatenate(first,last){
+    let full;
+    full = first + ' ' + last;
+    return full;
+}
+function secondFunction(){
+    let res;
+    res = concatenate('Waqas','Afzal');
+    document.write(res);
+}
