@@ -11,15 +11,10 @@
         document.write("Hello World inside body element.")
     </script><br> -->
     
-    <input type="button" value="Click me" onclick="sayHello()">
-    <p>This is Web Page Body</p>
-    
-  
+    <!-- <p>This is Web Page Body</p> -->
 
-
-
-    <script src="tutorialsPoint.js"></script>  
-    
+<!-- Functions -->
+    <h1 style="text-align:center;">Functions</h1>
     <h4>Calling  a function</h4>
     <form action="">
         <input type="button" value="Click me" onclick="callFunc()">
@@ -32,5 +27,77 @@
     <form action="">
         <button onclick="secondFunction()">Click me</button>
     </form>
+
+<!-- Events -->
+    <h1 style="text-align:center;">Events</h1>
+    <h4>alert Event</h4>
+    <form action="">
+        <input type="button" value="Click me" onclick="sayHello()">
+    </form>
+    <h4>onsubmit Event</h4>
+    <form action="t.cgi" method="POST" onsubmit="return validation()">
+        <input type="submit" value="submit">
+    </form>
+    <h4>onmouseoevr and onmouseout</h4>
+    <span onmouseover="over()" onmouseout="out()">
+        Place your mouse pointer here
+    </span>
+
+<!-- Cookie -->
+<!-- basically cookie is a form of data that is stored in our computer in text.file
+for example : if you go to amazon.com and place your fav products add to cart but you are not 
+even login or register in amazon but product store in local server -->
+    <h1 style="text-align:center;">Cookie</h1>
+    <ul>
+        <li> <b>Type of Cookies</b> (these two parts define the life of cookie)
+            <ul>
+                <li><b>Session</b> (means cookie expires when you close your chrome window(browser) not closing by tab)</li>
+                <li><b>Persistent</b> - 6 months (means set the time when our cookie expires)</li>
+            </ul>
+        </li>
+        <li><b>4kb</b> (maximum size limit per cookie)</li>
+        <li><b>documetn.cookie</b> (syntax: to create, update, read, and delete cookie)</li>
+    </ul>
+    <h4>Storing Cookie</h4>
+    <form action="" name="myform">
+        Enter name: <input type="text" name="customer"/><br>
+        Enter Email: <input type="text" name="customerEmail"/>
+    </form>
+    <button onclick="writeCookie()">Set Cookie</button>
+    
+    <h4>Setting cookie expiry date</h4>
+    <form action="" name="myform1">
+        Enter name: <input type="text" name="customer1"/><br>
+        Enter Email: <input type="text" name="customerEmail1"/>
+    </form>
+    <button onclick="expireCookie()">Set Cookie</button>
+    
+    <h4>Deleting a Cookie</h4>
+    <form action="" name="myform2">
+        Enter name: <input type="text" name="customer2"/><br>
+        Enter Email: <input type="text" name="customerEmail2"/>
+    </form>
+    <button onclick="deleteCookie()">Set Cookie</button>
+    <h4>Reading a Cookie</h4>
+    <form action="" name="myform2">
+        Enter name: <input type="text" name="customer2"/><br>
+        Enter Email: <input type="text" name="customerEmail2"/>
+    </form>
+    <button onclick="ReadCookie()">Set Cookie</button>
+
+<!-- Page Redirection -->
+    <h1 style="text-align:center;">Page Redirection</h1>
+    <h4>Example</h4>
+    <p>Click the following button, you will be redirected to Tutorials point home page.</p>
+    <button onclick="redirect()">Click me</button>
+
+    <h4>Set Time Out</h4>
+    <p>After 10 seconds, you will be redirected to Tutorials point home page.</p>
+    <p>you have to uncomment the function setTimeOut() inside js file </p>
+
+
+
+    <script src="tutorialsPoint.js"></script>  
+    
 </body>
 </html>

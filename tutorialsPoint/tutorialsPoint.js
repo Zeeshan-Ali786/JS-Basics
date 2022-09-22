@@ -1,11 +1,145 @@
 let lineBreak = "<br>";
 
-document.write('Hello World')
-document.write(lineBreak)
+// document.write('Hello World')
+// document.write(lineBreak)\
 
+                        // Functions
+// document.write(`<h1 style="text-align:center;">Functions</h1>`);
+// calling a function
+// document.write("<h4>calling a function</h4>")
+function callFunc(){
+    document.write("Calling a function from java script")
+}
+// Function parameters
+// document.write('<h4>Function Parameters</h4>');
+function callPara(x,y){
+    document.write('My Name is ',x,' ',y);
+}
+// the return Statement
+function concatenate(first,last){
+    let full;
+    full = first + ' ' + last;
+    return full;
+}
+function secondFunction(){
+    let res;
+    res = concatenate('Waqas','Afzal');
+    document.write(res);
+}
+
+                        // Events
+// document.write(`<h1 style="text-align:center;">Events</h1>`);
+// Alert Event
 function sayHello(){
     alert('Hello World')
 }
+// onsubmit event
+function validation(){
+    // document.write(`all validation goes here
+    // .........
+    // return either true or false`)
+}
+// onmouseoevr and onmouseout
+function over(){
+    document.write('Mouse Over');
+}
+function out(){
+    document.write('Mouse Out');
+}
+
+                        // Cookie
+// document.cookie = "key1 = value1;key2 = value2;expires = date";
+// read
+// document.cookie = "userName=Zeeshan Ali;"   //check this coockie inside application in inspect
+// update
+// document.write="userName=waqas"     //whenever you want to change value your key must be same
+
+// storing cookie
+function writeCookie(){
+    if(document.myform.customer.value == "" || document.myform.customerEmail.value == ""){
+        alert('Enter Some Value Here.')
+        return;
+    }
+    let cookievalue = document.myform.customer.value + ';';
+    let customerEmail = document.myform.customerEmail.value + ';';
+    document.cookie = "nameOfCustomer = " + cookievalue; //this key and value show inside application in inspect
+    document.cookie = "emailOfCustomer = " + customerEmail;  //this key and value show inside application in inspect
+    document.write("Setting Cookie: name = ",cookievalue,lineBreak);
+    document.write("Setting Cookie: Email = ",customerEmail);
+}
+
+//Setting cookie expiry date
+// method:1
+// document.cookie = "emailOfCustomer= " + customerEmail + "expires=fri 23 sep 2022 12:00:00 UTC"   //Universal Time Coordinate
+// Method:2
+function expireCookie(){
+    if(document.myform1.customer1.value == "" || document.myform1.customerEmail1.value == ""){
+        alert('Enter Some Value Here.')
+        return;
+    }
+    //new lines here in previous copied code
+    let now = new Date();
+    now.setMonth(now.getMonth() + 1);
+    let cookievalue = document.myform1.customer1.value + ';';
+    let customerEmail = document.myform1.customerEmail1.value + ';';
+    document.cookie = "nameOfCustomer = " + cookievalue + "expires = " + now.toUTCString() + ';'; //this key and value  and expire date show inside application in inspect
+    document.cookie = "emailOfCustomer = " + customerEmail + "expires = " + now.toUTCString() + ';'; 
+    // These name and email expires after 1 month of adding
+    
+    document.write("Setting Cookie: name = ",cookievalue,lineBreak);
+    document.write("Setting Cookie: Email = ",customerEmail);
+}
+
+// Deleting a Cookie
+// same code like expiry date just change in month like addind detail month - 1
+function deleteCookie(){
+    if(document.myform2.customer2.value == "" || document.myform2.customerEmail2.value == ""){
+        alert('Enter Some Value Here.')
+        return;
+    }
+    //new lines here in previous copied code
+    let now = new Date();
+    now.setMonth(now.getMonth() - 1);
+    let cookievalue = document.myform2.customer2.value + ';';
+    let customerEmail = document.myform2.customerEmail2.value + ';';
+    document.cookie = "nameOfCustomer = " + cookievalue + "expires = " + now.toUTCString() + ';'; //this key and value  and expire date show inside application in inspect
+    document.cookie = "emailOfCustomer = " + customerEmail + "expires = " + now.toUTCString() + ';'; 
+    // These name and email delete before 1 month of adding detail
+    
+    document.write("Setting Cookie: name = ",cookievalue,lineBreak);
+    document.write("Setting Cookie: Email = ",customerEmail);
+}
+function ReadCookie() {
+    var allcookies = document.cookie;
+    document.write ("All Cookies : ",allcookies);
+    // Get all the cookies pairs in an array
+    // cookiearray = allcookies.split(';');
+    
+    // // Now take key value pair out of this array
+    // for(var i=0; i<cookiearray.length; i++) {
+    //    name = cookiearray[i].split('=')[0];
+    //    value = cookiearray[i].split('=')[1];
+    //    document.write ("Key is : ", name, " and Value is : ", value, lineBreak);
+    // }
+ }
+
+                        //  Page Redirection
+function redirect(){
+    // window.location = ('https://www.tutorialspoint.com';
+    window.open(
+        'https://www.tutorialspoint.com',
+        '_blank' // <- This is what makes it open in a new window.
+      );
+}
+// set time Out
+// function setTimeOut() {
+//     window.open(
+//         'https://www.tutorialspoint.com',
+//         '_blank' // <- This is what makes it open in a new window.
+//       );
+//  }            
+//  document.write("You will be redirected to main page in 10 sec.");
+//  setTimeout('Redirect()', 10000);
 
                         // Variables
 document.write(`<h1 style="text-align:center;">Variables</h1>`);
@@ -24,10 +158,10 @@ document.write(lineBreak)
 // document.write(localVar)     local variable cant access outside function bcz scope of local variable only inside function chekscope()
 document.write("<strong>local variable cant access outside function bcz scope of local variable only inside function chekscope()</strong>")
 
-                        // Operators +, *, /, %, ++(increment), --(decrement)
+                        // Operators
 document.write(`<h1 style="text-align:center;">Operators</h1>`);
 
-// Arithemetic Operators
+// Arithemetic Operators +, *, /, %, ++(increment), --(decrement)
 document.write("<h4>Arithemetic Operators</h4>")
 // Addition
 function resultAdd(x,y){
@@ -367,28 +501,4 @@ for(let i = 0; i <= 5; i++){
         if(i == 4) break outerloop;
         document.write("InnerLoop = ",j,lineBreak);
     }
-}
-
-                        // Functions
-document.write(`<h1 style="text-align:center;">Functions</h1>`);
-// calling a function
-// document.write("<h4>calling a function</h4>")
-function callFunc(){
-    document.write("Calling a function from java script")
-}
-// Function parameters
-// document.write('<h4>Function Parameters</h4>');
-function callPara(x,y){
-    document.write('My Name is ',x,' ',y);
-}
-// the return Statement
-function concatenate(first,last){
-    let full;
-    full = first + ' ' + last;
-    return full;
-}
-function secondFunction(){
-    let res;
-    res = concatenate('Waqas','Afzal');
-    document.write(res);
 }
