@@ -622,4 +622,68 @@ document.write(flag.valueOf())
 
 // The Boolean Object
 document.write(`<h1 style="text-align:center;">The String Object</h1>`);
+// String Properties
+document.write("<h4>String Properties</h4>")
+// 1. Constructor
+// 2. length
+document.write("<b>length</b>",lineBreak);
+let str = "This is String";
+document.write("Length of str is : ",str.length,lineBreak)
+// 2. prototype
+document.write("<b>prototype</b>",lineBreak);
+function Book2(title,publisher){
+    this.title = title;
+    this.publisher = publisher;
+}
+const book4 = new Book2("Perl","leo INC");
+Book2.prototype.price = null;
+book4.price = 250;
+// The prototype property allows you to add properties and methods to any object 
+document.write("Book Title : ",book4.title,lineBreak);
+document.write("Book Publisher : ",book4.Publisher,lineBreak);
+document.write("Book price : ",book4.price);
+
+// String Methods
+document.write("<h4>String Methods</h4>");
+// 1.charAt()
+document.write("<b>charAt()</b>",lineBreak)
+document.write("It tells us what character are in index 8 is : ",str.charAt(8),lineBreak)
+// 2. charCodeAt()
+document.write("<b>charCodeAt()</b>",lineBreak)
+document.write("Cahracter code at index 8 variable is : ",str.charCodeAt(8),lineBreak)
+// 3.concat()
+// this method add two or more strings and return a new single string
+document.write("<b>concat()</b>",lineBreak)
+const str1 = "This is string 1";
+const str2 = "This is string 2";
+const str3 = str1.concat(str2);
+document.write("this method add two or more strings and return a new single string : ",str3,lineBreak)
+// 4. indexOf()
+document.write("<b>indexOf()</b>",lineBreak)
+document.write("index of String is  : ",str.indexOf("String"),lineBreak)
+// 4. lastindexOf()
+document.write("<b>lastindexOf()</b>",lineBreak)
+let  strLast = "This is String and again String"
+document.write("Returns the index of the last found occurrence  : ",strLast.lastIndexOf("String"),lineBreak)
+// 4. replace()
+document.write("<b>replace()</b>",lineBreak)
+let  strRep = "I like Apples"
+const strReplace = strRep.replace("Apples","Oranges")
+document.write("replace Apples with Orange  : ",strReplace,lineBreak)
+// 4. search()
+document.write("<b>search()</b>",lineBreak)
+let  strSearch = "I like Apples, Color of Apple is red";
+if(strSearch.search("Apple") == -1){
+    document.write("Apples not exist in this Statement",lineBreak)
+}else{
+    document.write("This Statement Contain Apple",lineBreak)
+}
+// slice
+document.write("<b>slice()</b>",lineBreak)
+let slice = strSearch.slice(4,-4);
+document.write("it deletes first and last 4 index variabkes from strSearch String : ",slice,lineBreak)
+// split
+document.write("<b>Split()</b>",lineBreak)
+let split = strSearch.split(" ",5);
+document.write("The split method returns the new array. Also, when the string is empty : ",split,lineBreak)
 
