@@ -520,3 +520,106 @@ for(let i = 0; i <= 5; i++){
         document.write("InnerLoop = ",j,lineBreak);
     }
 }
+
+                        // Object overview
+document.write(`<h1 style="text-align:center;">Objects</h1>`);
+let book = {
+    subject:"Perl",
+    author:"Mohtashim"
+}
+document.write("Book Name is : ",book.subject,lineBreak)
+document.write("Author Name is : ",book.author)
+// By using function
+document.write("<h4>By using Function</h4>")
+function Book(title,author){      //first word of constructor function should be uppercase
+    this.title = title;
+    this.author = author;  
+}
+const book1 = new Book("Perl","Mohtashim")
+document.write("Book Name is : ",book1.title,lineBreak);
+document.write("Auther Name is : ",book1.author,lineBreak);
+// Defining Methods for an Object
+document.write("<h4>Defining Methods for an Object</h4>")
+function addPrice(amount){
+    this.price = amount;
+}
+// function addPrice(amount) {        //The 'with' Keyword
+//     with(this) {
+//        price = amount;
+//     }
+//  }
+function Book1(title,author){      //first word of constructor function should be uppercase
+    this.title = title;
+    this.author = author;
+    this.addPrice = addPrice;       // Assign that method as property.  
+}
+const book2 = new Book1("Perl","Mohtashim");
+book2.addPrice(10)
+document.write("Book Name is : ",book2.title,lineBreak);
+document.write("Auther Name is : ",book2.author,lineBreak);
+document.write("Book Price is : ",book2.price,lineBreak);
+
+// The Number Object
+document.write(`<h1 style="text-align:center;">The Number Object</h1>`);
+// Number Properties
+document.write("<h4>Number Properties</h4>");
+document.write("<span><b>MAX_VALUE :  </b>It represents constants for the largest possible positive numbers that JavaScript can work with.</span>",lineBreak);
+let maxVal = Number.MAX_VALUE;
+document.write("Maximum Value of number = ",maxVal,lineBreak);
+//MIN_VALUE
+document.write("<span><b>MIN_VALUE :  </b>It represents constants for the Smallest possible positive numbers that JavaScript can work with.</span>",lineBreak);
+let minVal = Number.MIN_VALUE;
+document.write("Maximum Value of number = ",minVal,lineBreak);
+// constructor
+document.write("<b>Constructor :  </b>",lineBreak);
+const num = new Number(199.111);
+document.write("num.constructor = ",num.constructor)
+
+// Number Methods
+document.write("<h4>Number Methods</h4>");
+// toexponential
+document.write("<b>toExponential()</b>",lineBreak);
+let numVal = 111.123456
+let numExponential = numVal.toExponential(2);
+document.write("exponential is 2 (after point there is only 2 digits allow) : ",numExponential,lineBreak);
+// tofixed
+document.write("<b>tofixed()</b>",lineBreak);
+let numFixed = numVal.toFixed(3);
+document.write("after point 3 digit is fixed) : ",numFixed,lineBreak);
+// toPrecision
+document.write("<b>toPrecision()</b>",lineBreak);
+let numPrecision = numVal.toPrecision(4);
+document.write("4 digit is fixed whatever it is before point or after point) : ",numPrecision,lineBreak);
+// toString
+document.write("<b>toString()</b>",lineBreak);
+let numString = numVal.toString(2);
+document.write("Convert a number to a string using base 2) : ",numString,lineBreak);
+
+// The Boolean Object
+document.write(`<h1 style="text-align:center;">The Boolean Object</h1>`);
+document.write(`<span>The Boolean object represents two values, either "true" or "false".</span>`)
+// Boolean Methods
+document.write("<h4>Boolean Methods</h4>");
+// toSource
+// document.write("<b>toSource()</b>",lineBreak);
+// function Book3(title, publisher, price) {
+//     this.title = title;
+//     this.publisher = publisher;
+//     this.price = price;
+//  } 
+// var newBook = new Book3("Perl","Leo Inc",200); 
+// document.write(newBook.toSource());
+
+// toString
+document.write("<b>toString()</b>",lineBreak)
+let flag = false;
+document.write(flag.toString(),lineBreak)
+// valueOf
+document.write("<b>valueOf()</b>",lineBreak)
+flag = true;
+document.write(flag.valueOf())
+
+
+// The Boolean Object
+document.write(`<h1 style="text-align:center;">The String Object</h1>`);
+
