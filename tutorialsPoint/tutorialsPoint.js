@@ -751,7 +751,7 @@ document.write("roots is : " + roots,lineBreak);
 document.write("<b>3. For each()</b>",lineBreak);
 function printBr(element, index) {
     document.write("[" + index + "] is " + element ,lineBreak); 
- }[12, 5, 8, 130, 44].forEach(printBr);
+}[12, 5, 8, 130, 44].forEach(printBr);
 // 4. indexof
 document.write("<b>4. indexof()</b>",lineBreak);
 let indexArr = [13, 5, 8, 130, 44].indexOf(8);
@@ -805,3 +805,109 @@ let unshiftArr = ["red","Black","White","Yellow"];
 let lengthUnshift = unshiftArr.unshift("Mehroon");
 document.write("unshift() method adds one or more elements to the beginning of an array : ",unshiftArr,lineBreak);
 document.write("lengthUnshift : ",lengthUnshift,lineBreak);
+
+                        //  The Date Object
+document.write(`<h1 style="text-align:center;">The Date Object</h1>`);
+document.write("<h4>Date Methods</h4>");
+// 1. Date()
+let currentDate = new Date();
+document.write("1. Today Date : ",currentDate,lineBreak)
+// 2. getDate()
+let getD = new Date("Sun Sep 25 2022 15:52:04")
+document.write("<h3>2. Get Date Mothods</h3>");
+// GetDate List
+document.write("<ul>")
+document.write("<li>","Get Defined(given) Date : ",getD.getDate(),"</li>")
+document.write("<li>","GetDAy returns the day of a week acording to numbers like 0 for sun and 1 for mon etc : ",getD.getDay(),"</li>")
+document.write("<li>","Get Full Year : ",getD.getFullYear(),"</li>")
+document.write("<li>","Get Hours : ",getD.getHours(),"</li>")
+document.write("<li>","Get MilliSeconds : ",currentDate.getMilliseconds(),"</li>")
+document.write("<li>","Get Minutes : ",getD.getMinutes(),"</li>")
+document.write("<li>","Get Seconds : ",getD.getSeconds(),"</li>")
+document.write("<li>","Get Month (0 to 11 according to months) : ",getD.getMonth(),"</li>")
+document.write("<li>","Get Time( returns the numeric value corresponding to the time for the specified date according to universal time.) : ",getD.getTime(),"</li>")
+document.write("<li>","Get TimezoneOffset : ",getD.getTimezoneOffset(),"</li>")
+document.write("</ul>")
+
+document.write("<b>Get UTC Date Mothods</b>",lineBreak);
+// UTC Get Date List   (Coordinated Universal Time)
+document.write("<ul>")
+document.write("<li>","Get UTC Date : ",getD.getUTCDate(),"</li>")
+document.write("<li>","Get UTC Day : ",getD.getUTCDay(),"</li>")
+document.write("<li>","Get UTC Full Year : ",getD.getUTCFullYear(),"</li>")
+document.write("<li>","Get UTC Hours : ",getD.getUTCHours(),"</li>")
+document.write("<li>","Get UTC MilliSeconds : ",getD.getUTCMilliseconds(),"</li>")
+document.write("<li>","Get UTC Minites : ",getD.getUTCMinutes(),"</li>")
+document.write("<li>","Get UTC Seconds : ",getD.getUTCSeconds(),"</li>")
+document.write("<li>","Get UTC Month : ",getD.getUTCMonth(),"</li>",lineBreak)
+document.write("</ul>")
+
+// 3. SetDate
+document.write("<h3>3. Set Date Mothods</h3>");
+let setDate = new Date("Sat Sep 24 2022 12:44:10");
+document.write("Original date : ",setDate,lineBreak)
+// SetDate List
+document.write("<ul>")
+setDate.setDate( 30 )    //setDate
+document.write("<li>","Set Date  whatever you want : ",setDate,"</li>");
+setDate.setFullYear( 2000 )   //setYear
+document.write("<li>","Set Full Year  whatever you want : ",setDate,"</li>");
+setDate.setHours( 15 )   //setHours
+document.write("<li>","Set Hours  whatever you want : ",setDate,"</li>");
+setDate.setMilliseconds( 900 )   //setMillisecond
+document.write("<li>","Set Milliseconds  whatever you want : ",setDate,"</li>");
+setDate.setMinutes( 15 )   //setMinutes
+document.write("<li>","Set Minutes  whatever you want : ",setDate,"</li>");
+setDate.setMonth( 7 )   //setMonth
+document.write("<li>","Set Month  whatever you want : ",setDate,"</li>");
+setDate.setSeconds( 15 )   //setSeconds
+document.write("<li>","Set Seconds  whatever you want : ",setDate,lineBreak,"</li>");
+document.write("</ul>")
+
+document.write("<b>Set UTC Date Mothods</b>",lineBreak);
+// UTC Set Date List   (Coordinated Universal Time)
+document.write("<ul>")
+setDate.setUTCDate(15)
+document.write("<li>","Set UTC Date whatever you want : ",setDate,"</li>");
+setDate.setUTCFullYear( 1999 )   //setYear
+document.write("<li>","Set UTC Full Year  whatever you want : ",setDate,"</li>");
+setDate.setUTCHours( 12 )   //setHours
+document.write("<li>","Set UTC Hours  whatever you want : ",setDate,"</li>");
+setDate.setUTCMilliseconds( 1000 )   //setMillisecond
+document.write("<li>","Set UTC Milliseconds  whatever you want : ",setDate,"</li>");
+setDate.setUTCMinutes( 30 )   //setMinutes
+document.write("<li>","Set UTC Minutes  whatever you want : ",setDate,"</li>");
+setDate.setUTCMonth( 11 )   //setMonth
+document.write("<li>","Set UTC Month  whatever you want : ",setDate,"</li>");
+setDate.setUTCSeconds( 55 )   //setSeconds
+document.write("<li>","Set UTC Seconds  whatever you want : ",setDate,"</li>");
+document.write("</ul>")
+
+//4.  todateString
+document.write("<b>4. todateString()</b>",lineBreak);
+let dateStr = new Date(2022, 6, 28, 14, 39, 7);
+document.write("Date To String : ",dateStr.toDateString(),lineBreak)
+// 5. tolocaltime string
+document.write("<b>5. toLocalTimeString()</b>",lineBreak);
+document.write("TO Local Time String : ",dateStr.toLocaleTimeString(),lineBreak)
+// 6.toTimeString
+document.write("<b>6. toTimeString()</b>",lineBreak);
+document.write("TO Time String : ",dateStr.toTimeString(),lineBreak)
+// 7. toUTC String
+document.write("<b>5. to UTC String()</b>",lineBreak);
+document.write("TO UTC String : ",dateStr.toUTCString(),lineBreak)
+// 8.to String
+document.write("<b>8. toString()</b>",lineBreak);
+dateStr1 = dateStr.toString();
+document.write("TO LocalFormat String : ",dateStr,lineBreak)
+
+// Date Static Methods
+document.write("<h4>Date Static Methods</h4>",lineBreak);
+// Date.parse
+document.write("<b>1. Date.Parse</b>",lineBreak);
+let dateParse = Date.parse("Sat Sep 24 2022 12:44:10");
+document.write( "Number of milliseconds from 1970: ",dateParse,lineBreak);
+// 2. Date.UTC
+document.write("<b>2. Date.UTC</b>",lineBreak);
+let dateUtc = Date.UTC(2022,8,26);
+document.write( "Number of milliseconds from 1970: ",dateUtc,lineBreak);
