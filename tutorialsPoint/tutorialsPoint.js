@@ -948,3 +948,86 @@ document.write("<li> Math.sin(x) Returns the sine of a number : ",Math.sin(0.5),
 document.write("<li> Math.sqrt(x) Returns the square root  of a number : ",Math.sqrt(0.5),"</li>")
 document.write("<li> Math.tan(x) Returns the tan  of a number : ",Math.tan(0.5),"</li>")
 document.write("</ul>");
+
+                        //Regular Expressions and RegExp Object 
+document.write(`<h1 style="text-align:center;">Regular Expressions and RegExp Object</h1>`);
+document.write("<h4>RegExp Properties</h4>");
+// Regexp properties List
+document.write("<ul>");
+let re = new RegExp("String")
+document.write("<li> Constructor : ",re.constructor,"</li>")
+document.write("<li> Source : ",re.source,"</li>")
+document.write(`<li>Returns "TRUE" if the "g" modifier is set, "FALSE" otherwise.</li>`)
+document.write("<ul>");
+    if(re.global){
+        document.write("<li>Test - 1 Global property is set</li>")
+    }else{
+        document.write("<li>Test -1 Global property is not set</li>")
+    }
+    // Returns "TRUE" if the "g" modifier is set, "FALSE" otherwise.
+    re = new RegExp("String","g");
+    if(re.global){
+        document.write("<li>Test - 2 Global property is set</li>")
+    }else{
+        document.write("<li>Test - 2 Global property is not set</li>")
+    }
+document.write("</ul>");
+
+document.write(`<li>Returns "TRUE" if the "i" modifier is set, "FALSE" otherwise.</li>`)
+document.write("<ul>");
+    if(re.ignoreCase ){
+        document.write("<li>Test - 1 ignoreCase  property is set</li>")
+    }else{
+        document.write("<li>Test -1 ignoreCase  property is not set</li>")
+    }
+    // Returns "TRUE" if the "g" modifier is set, "FALSE" otherwise.
+    re = new RegExp("String","i");
+    if(re.ignoreCase ){
+        document.write("<li>Test - 2 ignoreCase  property is set</li>")
+    }else{
+        document.write("<li>Test - 2 ignoreCase  property is not set</li>")
+    }
+document.write("</ul>");
+
+document.write(`<li>Returns "TRUE" if the "m" modifier is set, "FALSE" otherwise.</li>`)
+document.write("<ul>");
+    if(re.multiline  ){
+        document.write("<li>Test - 1 multiline   property is set</li>")
+    }else{
+        document.write("<li>Test -1 multiline   property is not set</li>")
+    }
+    // Returns "TRUE" if the "g" modifier is set, "FALSE" otherwise.
+    re = new RegExp("String","m");
+    if(re.multiline  ){
+        document.write("<li>Test - 2 multiline   property is set</li>")
+    }else{
+        document.write("<li>Test - 2 multiline   property is not set</li>")
+    }
+document.write("</ul>");
+document.write("</ul>");
+
+// RegExp Methods
+document.write("<h4>RegExp Methods</h4>");
+document.write("<ul>");
+
+document.write("<li>Returns the matched text if a match is found, and null if not.</li>")
+document.write("<ul>");
+let regString = "Javascript is an interesting scripting language";
+let re1 = new RegExp("script","g");
+document.write("<li>Test 1 - Retured Value : ",re1.exec(regString),"</li>")
+re1 = new RegExp("pushing","g");
+document.write("<li>Test 2 - Returened Value : ",re1.exec(regString),"</li>")
+document.write("</ul>")
+
+document.write("<li>Returns the matched text if a match is found, and null if not.</li>")
+document.write("<ul>");
+let re2 = new RegExp("script","g");
+document.write("<li>Test 1 - Retured Value : ",re2.test(regString),"</li>")
+re2 = new RegExp("pushing","g");
+document.write("<li>Test 2 - Returened Value : ",re2.test(regString),"</li>")
+document.write("</ul>")
+
+document.write("<li>ToString : ",re2.toString(regString),"</li>")
+
+document.write("</ul>");
+
