@@ -911,3 +911,40 @@ document.write( "Number of milliseconds from 1970: ",dateParse,lineBreak);
 document.write("<b>2. Date.UTC</b>",lineBreak);
 let dateUtc = Date.UTC(2022,8,26);
 document.write( "Number of milliseconds from 1970: ",dateUtc,lineBreak);
+
+
+                        // The Math Object
+document.write(`<h1 style="text-align:center;">The Math Object</h1>`);
+document.write("<h4>Math Properties</h4>");
+// Math Properties list
+document.write("<ul>");
+document.write("<li>Property Value (Math.E): ",Math.E,"</li>");
+document.write("<li>Property Value (Math.LN2): ",Math.LN2,"</li>");
+document.write("<li>Property Value (Math.LN10): ",Math.LN10,"</li>");
+document.write("<li>Property Value (Math.LOG2E): ",Math.LOG2E,"</li>");
+document.write("<li>Property Value (Math.LOG10E): ",Math.LOG10E,"</li>");
+document.write("<li>Property Value (Math.PI): ",Math.PI,"</li>");
+document.write("<li>Property Value (Math.SQRT1_2): ",Math.SQRT1_2,"</li>");
+document.write("<li>Property Value (Math.SQRT2): ",Math.SQRT2,"</li>");
+document.write("</ul>");
+
+document.write("<h4>Math Methods</h4>");
+document.write("<ul>");
+document.write("<li> Math.abs(x) returns the absolute value of a number : ",Math.abs(-1),"</li>")
+document.write("<li> Math.acos(x) Returns the arccosine in radians of a number : ",Math.acos(-1),"</li>")
+document.write("<li> Math.asin(x) Returns the arcsine  in radians of a number : ",Math.asin(-1),"</li>")
+document.write("<li> Math.atan2(x) Returns the arctangent  in radians of a number : ",Math.atan2(-1,2),"</li>")
+document.write("<li> Math.ceil(x) approximate the value of 33.33 to 34 : ",Math.ceil(33.33),"</li>")
+document.write("<li> Math.floor(x) approximate the value of 33.33 to 33 : ",Math.floor(33.33),"</li>")
+document.write("<li> Math.cos(x) Returns the cosine of a number : ",Math.cos(90),"</li>")
+document.write("<li> Math.exp(x) Returns the exponential value of the variable x : ",Math.exp(90),"</li>")
+document.write("<li> Math.log(x) Returns the natural logarithm (base E) of a number : ",Math.log(90),"</li>")
+document.write("<li> Math.max(x) Returns largest of zero or more numbers : ",Math.max(-1, -3, -40),"</li>")
+document.write("<li> Math.min(x) Returns smallest of zero or more numbers : ",Math.min(-1, -3, -40),"</li>")
+document.write("<li> Math.pow(x) Returns 7 power 2 : ",Math.pow(7,2),"</li>")
+document.write("<li> Math.random(x) Returns random number between 0 and 1 : ",Math.random(),"</li>")
+document.write("<li> Math.round(x) Returns greater approximate value if value>0.5 otherwise return 0 if value<0.5 : ",Math.round(0.5),"</li>")
+document.write("<li> Math.sin(x) Returns the sine of a number : ",Math.sin(0.5),"</li>")
+document.write("<li> Math.sqrt(x) Returns the square root  of a number : ",Math.sqrt(0.5),"</li>")
+document.write("<li> Math.tan(x) Returns the tan  of a number : ",Math.tan(0.5),"</li>")
+document.write("</ul>");
