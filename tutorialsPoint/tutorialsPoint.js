@@ -559,7 +559,7 @@ document.write("Book Name is : ",book2.title,lineBreak);
 document.write("Auther Name is : ",book2.author,lineBreak);
 document.write("Book Price is : ",book2.price,lineBreak);
 
-// The Number Object
+                        // The Number Object
 document.write(`<h1 style="text-align:center;">The Number Object</h1>`);
 // Number Properties
 document.write("<h4>Number Properties</h4>");
@@ -595,7 +595,7 @@ document.write("<b>toString()</b>",lineBreak);
 let numString = numVal.toString(2);
 document.write("Convert a number to a string using base 2) : ",numString,lineBreak);
 
-// The Boolean Object
+                        // The Boolean Object
 document.write(`<h1 style="text-align:center;">The Boolean Object</h1>`);
 document.write(`<span>The Boolean object represents two values, either "true" or "false".</span>`)
 // Boolean Methods
@@ -620,7 +620,7 @@ flag = true;
 document.write(flag.valueOf())
 
 
-// The Boolean Object
+                        // The String Object
 document.write(`<h1 style="text-align:center;">The String Object</h1>`);
 // String Properties
 document.write("<h4>String Properties</h4>")
@@ -661,16 +661,16 @@ document.write("this method add two or more strings and return a new single stri
 // 4. indexOf()
 document.write("<b>indexOf()</b>",lineBreak)
 document.write("index of String is  : ",str.indexOf("String"),lineBreak)
-// 4. lastindexOf()
+// 5. lastindexOf()
 document.write("<b>lastindexOf()</b>",lineBreak)
 let  strLast = "This is String and again String"
 document.write("Returns the index of the last found occurrence  : ",strLast.lastIndexOf("String"),lineBreak)
-// 4. replace()
+// 6. replace()
 document.write("<b>replace()</b>",lineBreak)
 let  strRep = "I like Apples"
 const strReplace = strRep.replace("Apples","Oranges")
 document.write("replace Apples with Orange  : ",strReplace,lineBreak)
-// 4. search()
+// 7. search()
 document.write("<b>search()</b>",lineBreak)
 let  strSearch = "I like Apples, Color of Apple is red";
 if(strSearch.search("Apple") == -1){
@@ -678,12 +678,130 @@ if(strSearch.search("Apple") == -1){
 }else{
     document.write("This Statement Contain Apple",lineBreak)
 }
-// slice
+// 8. slice
 document.write("<b>slice()</b>",lineBreak)
 let slice = strSearch.slice(4,-4);
 document.write("it deletes first and last 4 index variabkes from strSearch String : ",slice,lineBreak)
-// split
+// 9. split
 document.write("<b>Split()</b>",lineBreak)
 let split = strSearch.split(" ",5);
 document.write("The split method returns the new array. Also, when the string is empty : ",split,lineBreak)
+// 10. toLocaleLowerCase()
+document.write("<b>toLocaleLowerCase()</b>",lineBreak);
+const toLower = "This Method is Used to Convert the Characters Within a String to Lowercase.";
+document.write("toLocaleLowerCase : ",toLower.toLocaleLowerCase(),lineBreak);
+document.write("toLocaleUpperCase : ",toLower.toLocaleUpperCase(),lineBreak);
+document.write("toLowerCase : ",toLower.toLowerCase(),lineBreak);
+document.write("toUpperCase : ",toLower.toUpperCase(),lineBreak);
 
+// String HTML Wrappers
+document.write("<h4>String HTML Wrappers</h4>");
+document.write("<b>UnComment all alerts to check all wrappers</b>",lineBreak)
+// const wrapper = "HTML Wrapper";
+// alert(wrapper.anchor( "myanchor" ));
+// alert(wrapper.big());
+// alert(wrapper.blink());
+// alert(wrapper.bold());
+// alert(wrapper.fixed());
+// alert(wrapper.fontcolor( "myfontcolor" ));
+// alert(wrapper.fontsize( "fontsize" ));
+// alert(wrapper.italics());
+// alert(wrapper.link( "mylink" ));
+// alert(wrapper.small());
+// alert(wrapper.strike());
+// alert(wrapper.sub());
+// alert(wrapper.sup());
+
+                        // The Arrays Object
+document.write(`<h1 style="text-align:center;">The Arrays Object</h1>`);
+// Array Properties
+document.write("<h4>Array Properties</h4>");
+// 1. constructor
+document.write("<b>1. Constructor</b>",lineBreak);
+const arr = [10,20,30];
+document.write("Array Constructor : ",arr.constructor,lineBreak)
+document.write("<b>2. Length</b>",lineBreak);
+document.write("Array Length : ",arr.length,lineBreak)
+document.write("<b>3. Prototype</b>",lineBreak);
+function Person(firstName,lastName){     //constructor
+    this.firstName = firstName;
+    this.lastName = lastName;
+}
+const perInfo = new Person("Zeeshan","Ali");
+Person.prototype.perAge = null;    //prototype add property in Person constructor
+perInfo.perAge = 20;
+document.write("Person First Name is : ",perInfo.firstName,lineBreak); 
+document.write("Person Last Name is : ",perInfo.lastName,lineBreak); 
+document.write("Person Age is : ",perInfo.perAge,lineBreak); 
+
+// Array Methods
+document.write("<h4>Array Methods</h4>");
+// 1. concat
+document.write("<b>1. Concat()</b>",lineBreak);
+let alpha = ['a','b','c'];
+let numeric = [1,2,3];
+let alphanumeric = alpha.concat(numeric);
+document.write("Combine(Concate) to diiferent arrays : ",alphanumeric,lineBreak);
+// 2. map()
+document.write("<b>2. Map()</b>",lineBreak);
+let numbers = [1, 4, 9];
+let roots = numbers.map(Math.sqrt);
+document.write("roots is : " + roots,lineBreak);
+// 3. foreach
+document.write("<b>3. For each()</b>",lineBreak);
+function printBr(element, index) {
+    document.write("[" + index + "] is " + element ,lineBreak); 
+ }[12, 5, 8, 130, 44].forEach(printBr);
+// 4. indexof
+document.write("<b>4. indexof()</b>",lineBreak);
+let indexArr = [13, 5, 8, 130, 44].indexOf(8);
+document.write("index of 8 is : ",indexArr,lineBreak)
+// 5. join
+document.write("<b>4. join()</b>",lineBreak);
+let joinArr = ["First","Second","Third"];
+let joinAll = joinArr.join(" + ");
+document.write("Combine All three var in array with Plus and space : ",joinAll,lineBreak)
+// 6. lastindexof
+document.write("<b>6. lastindexof()</b>",lineBreak);
+let lastIndexArr = [13, 5, 8, 130, 8, 44, 55].lastIndexOf(8);
+document.write("index of 8 is : ",lastIndexArr,lineBreak)
+// pop()
+document.write("<b>7. Pop()</b>",lineBreak);
+let popArr = [1, 5, 7];
+document.write("Javascript array pop() method removes the last element from an array and returns that element  : ",popArr.pop(),lineBreak)
+document.write("Javascript array pop() method removes the last element from an array and returns that element  : ",popArr.pop(),lineBreak)
+// Push()
+document.write("<b>8. Push()</b>",lineBreak);
+let pushArr = [1, 2, 3];
+let pushTen = pushArr.push(10);
+document.write("We are pushing here 10 in pushArr : ",pushArr,lineBreak)
+// Reduce()
+document.write("<b>9. Reduce()</b>",lineBreak);
+let reduceArr = [1,2,3].reduceRight(function(a,b){return a+b;})
+document.write("Total (Reduce) : ",reduceArr,lineBreak)
+// ReduceRight()
+document.write("<b>10. ReduceRight()</b>",lineBreak);
+let reduceRightArr = [1,2,3,4].reduceRight(function(a,b){return a+b;})
+document.write("Total (ReduceRight) : ",reduceRightArr,lineBreak)
+// Reverse
+document.write("<b>11. Reverce()</b>",lineBreak);
+let reverceArr = [1,2,3,4,5];
+document.write("Revese the Array : ",reverceArr.reverse(),lineBreak)
+// Shift()
+document.write("<b>12. Shift()</b>",lineBreak);
+let shiftArr = [1,2,3,45,7];
+document.write("shift()method removes the first element from an array and returns that element : ",shiftArr.shift(),lineBreak)
+// Slice()
+document.write("<b>13. Slice()</b>",lineBreak);
+let sliceArr = ["red","Black","White","Yellow"];
+document.write("Slice from inedx 1 to 3: ",sliceArr.slice(1,3),lineBreak);
+// Sort()
+document.write("<b>14. Sort()</b>",lineBreak);
+let sortArr = ["red","Black","White","Yellow"];
+document.write("Sorted Array : ",sortArr.sort(),lineBreak);
+// unshift()
+document.write("<b>15. unshift()</b>",lineBreak);
+let unshiftArr = ["red","Black","White","Yellow"];
+let lengthUnshift = unshiftArr.unshift("Mehroon");
+document.write("unshift() method adds one or more elements to the beginning of an array : ",unshiftArr,lineBreak);
+document.write("lengthUnshift : ",lengthUnshift,lineBreak);
