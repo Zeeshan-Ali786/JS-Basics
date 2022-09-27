@@ -159,6 +159,89 @@ function promptConfirmation(){
     document.write("You have enetred : ",getprompt)
     
 }
+
+                        // DOM (Document Object Model or DOM)
+// element = document.all;      //return all doc tags in html 
+// element = document.head;        //return head element
+// element = document.body;        //return body element
+// element = document.documentElement;        //return all element
+// element = document.URL;        //return URL of website
+// element = document.baseURI;        //return URL of website
+// element = document.anchors;        //return array of anchors
+// element = document.title
+
+// Most important target methods
+element = document.getElementById("heading_id")   
+element = document.getElementsByClassName("heading_class");
+element = document.getElementsByClassName("heading_class")[1];  //target heading class in 1 index in all heading_class array
+element = document.getElementsByTagName("p");  
+element = document.getElementsByTagName("p")[6];   //target tag name according to its index in all p tag array  
+  
+console.log(element) 
+
+// Get DOM in js file
+document.write(`<h2 style="margin-left:5rem;">Get DOM in js file</h2>`)
+// innerText
+document.write("<h4>innerText</h4>")
+let innText = document.getElementById("content").innerText;  //its not return tags just return text
+document.write("Inner Text of content (its not return tags just return text): ",innText,lineBreak)
+console.log(innText)
+
+// innerHTML
+document.write("<h4>innerHTML</h4>")
+let innHtml = document.getElementById("content").innerHTML;
+document.write("Inner HTML of content(its return tags and text) (Check in console): ","{",innHtml,"}",lineBreak)
+console.log(innHtml);
+
+// getAttribute
+document.write("<h4>getAttribute</h4>")
+let getAttr = document.getElementById("content").getAttribute("class");
+document.write("class attribute in content id div is (returns the value of given attribute) : ",getAttr)
+// getAttributeNode
+document.write("<h4>getAttributeNode</h4>")
+let getAttrNode = document.getElementById("content").getAttributeNode("class");
+document.write("class attribute in content id div is (returns full given attribute) (Check in console): ",getAttrNode)
+console.log(getAttrNode);
+// Attributes
+document.write("<h4>getAttributeNode</h4>")
+let attr = document.getElementById("content").attributes;
+// let attr = document.getElementById("content").attributes[1].value;      //value of attr in 1 index  
+// let attr = document.getElementById("content").attributes[1].name;    //name of attr in 1 index in array
+document.write("Return all attributes in content id tag in the form of array (check in console): ",attr)
+console.log(attr);
+
+// Set DOM in js file
+document.write(`<h2 style="margin-left:5rem;">Set DOM in js file</h2>`)
+// innerText
+document.write("<h4>Set innerText</h4>");
+let orText = document.getElementById("heading_id").innerText;
+document.write("Original text in heading id div : ",orText,lineBreak);
+document.getElementById("heading_id").innerText = "<h2>Text is Changed (Set)</h2>";
+orText =  document.getElementById("heading_id").innerText;
+document.write("Changed text in heading id div : ",orText);
+
+// set innerHTML
+document.write("<h4>Set innerHTML</h4>");
+let setInnHtml = document.getElementById("heading_id").innerHTML;
+document.write("Original inner HTML: ",setInnHtml,lineBreak);
+document.getElementById("heading_id").innerHTML = "<h2>Change innerHTML (Set)</h2>";
+setInnHtml = document.getElementById("heading_id").innerHTML;
+document.write("Changed text in heading id div (h2 tag access here): ",setInnHtml)
+// console.log(setInnHtml);
+
+// setAttribute
+document.write("<h4>setAttribute</h4>")
+document.getElementById("content").setAttribute("class","xyz")
+// set style to change border color 
+document.getElementById("content").setAttribute("style","border:5px solid red")
+// removeattribute
+document.getElementById("content").removeAttribute("style"); //delete style attr and its value
+let setAttr = document.getElementById("content").getAttribute("class");  
+document.write("set attribute classname from attr to xyz : ",setAttr)
+
+// all upper topics have link with html file 
+
+
                         // Variables
 document.write(`<h1 style="text-align:center;">Variables</h1>`);
 // global or local variable

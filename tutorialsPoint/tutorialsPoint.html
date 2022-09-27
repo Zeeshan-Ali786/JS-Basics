@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tutorials-Point-Learning</title>
 </head>
 <body>
     <!-- <script type="text/javascript">
@@ -106,16 +106,100 @@ even login or register in amazon but product store in local server -->
     <button onclick="promptConfirmation()">Click me</button>
 
 <!-- Void Keyword -->
-<h1 style="text-align:center;">Void Keyword</h1>
-    <p>Click the following, This won't react at all... type javascript alert event inside html file</p>
-    <a href = "javascript:void(alert('Warning!!!'))">Click me!</a> 
+    <h1 style="text-align:center;">Void Keyword</h1>
+        <p>Click the following, This won't react at all... type javascript alert event inside html file</p>
+        <a href = "javascript:void(alert('Warning!!!'))">Click me!</a> 
 
 <!-- Page Printing -->
-<h1 style="text-align:center;">Page Printing</h1>
-    <h4>window.print</h4>
-    <button onclick="window.print()">Print</button>
+    <h1 style="text-align:center;">Page Printing</h1>
+        <h4>window.print</h4>
+        <button onclick="window.print()">Print</button>
+
+<!-- DOM -->
+    <h1 style="text-align:center;"> Document Object Model or DOM</h1>
+    <h4>Methods for target DOM (To GET and SET the value of html tags using js).(inside HTML file)</h4>
+    <ul>
+        <li>Most Important Target Methods</li>
+        <ul>
+            <li>id : getElementById("")</li>
+            <li>Class Name : getElementsByClassName("")</li>
+            <li>Tag Name : getElementsByTagName("")</li>
+        </ul>
+        <li>Basic Targit Methods</li>
+        <ul>    
+            <li>document.all  :  (return all tags in html document)</li>
+            <ul>
+                <li>document.all[7] : target element in 7 index (according to its length)</li>
+            </ul>
+            <li>document.images : (Same as document.all)</li>
+            <li>document.anchors : (Same as document.all)</li>
+            <li>document.links : (Same as document.all)</li>
+            <li>document.forms : (Same as document.all)</li>
+            <li>document.head : (return Head element)</li>
+            <li>document.title : (return title element)</li>
+            <li>document.body : (return body element)</li>
+            <li>document.URL : (Returns URL of wbsite)</li>
+            <li>document.baseURI : (Returns URL of wbsite)</li>
+            <li>document.domain : domain name like abcd.com </li>
+            <li>document.documentElement : return all document</li>
+            <li>document.doctype : (return document type like this doctype is html)</li>
+        </ul>
+    </ul>
+
+    <h4>Get DOM in html file</h4>
+    <ul>
+        <li>HTMl</li>
+        <ul>
+            <li>Methods to get html</li>
+            <li><b>innerHTML</b> : (it helps to get HTML)</li>
+        </ul>
+        <li>Text</li>
+        <ul>
+            <li>Methods to get Text</li>
+            <li><b>innerText</b> : (it helps to get Text)</li>
+        </ul>
+        <li>Attribute</li>
+        <ul>
+            <li>Methods to get Attributes</li>
+            <li><b>getAttribute</b> : (it helps to get Attribute value)</li>
+            <li><b>getAttributeNode</b> : (it helps to get full Attribute)</li>
+            <li><b>Attributes</b> : (it helps to get list of given Attribute)</li>
+        </ul>
+    </ul>
+
+    <h4>Set DOM in html file</h4>
+    <ul>
+        <li>HTMl</li>
+        <ul>
+            <li>Methods to set html</li>
+            <li><b>innerHTML</b> : (it helps to set HTML)</li>
+        </ul>
+        <li>Text</li>
+        <ul>
+            <li>Methods to set Text</li>
+            <li><b>innerText</b> : (it helps to set Text)</li>
+        </ul>
+        <li>Attribute</li>
+        <ul>
+            <li>Methods to get Attributes</li>
+            <li><b>setAttribute</b> : (it helps to set Attribute value)</li>
+            <li><b>removeAttribute</b> : (it helps to get Attribute)</li>
+        </ul>
+    </ul>
 
 
+    <div id="heading_id">
+        <h2>Heading id (id:heading_id)</h2>
+    </div>
+    <h2 class="heading_class">
+        Heading Class (class:heading_class)
+    </h2>
+    <div id="content" class="attr" style="border: 5px solid yellow;">
+        <h2 class="heading_class">
+            Heading Class (class:heading_class)
+        </h2>
+        <p>Paragraph Tag</p>
+    </div>
 
     <script src="tutorialsPoint.js"></script>  
     
