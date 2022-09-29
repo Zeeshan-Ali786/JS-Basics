@@ -122,7 +122,7 @@ document.write(`<h2 style="text-align:center;">Prototype</h2>`,lineBreak);
 let person = {};
 console.log(person) //All objects connected with prototype with some built in methods
 
-// constructor function
+// constructor function one
 function Bike(n,mod,avrg,eng){
     this.Name = n;
     this.Model = mod;
@@ -134,9 +134,9 @@ function Bike(n,mod,avrg,eng){
     // }
 }
 
-Bike.prototype.title = function(){
-        document.write(this.Name," ",this.Engine);
-        // document.write("Title")
+Bike.prototype.start = function(){
+        // document.write(this.Name," ",this.Engine);
+        document.write("Starting Bike (Bike Prototype Function)")
     }
 
 let honda = new Bike("Honda","2016","35km","125");
@@ -155,13 +155,15 @@ document.write(`<b>Check in console </b> method define in Bike(Constructor) and 
  thats why we move all methods in constructer func prototype<br>
 <br>`)
 
-document.write("Honda Title : ")
-honda.title()
+document.write("Honda Start : ")
+honda.start()
 
 document.write("<br>Now title method will not copied in all objects DRY(setisfied)")
 
 // prototype Inheritance
 document.write("<h3>Prototype Inheritance</h3>");
+
+
 // 2nd Constructor function
 function HeavyBike(hp){
     this.horsepower = hp;
@@ -183,4 +185,83 @@ console.log(kawasakiNinja)
 HeavyBike.prototype.__proto__ = Bike.prototype;
 
 // now we can acess methodds of bike prototype in heavybike prototype
-kawasakiNinja.cylender()
+// kawasakiNinja.cylender(2)
+document.write("<br><br>We are using Bike Constructor Start func in Heavy bike Constructor obj.<br>")
+kawasakiNinja.start()
+
+                        // Prototype example  2
+document.write(`<h2 style="text-align:center;">Prototype Example 2</h2>`,lineBreak);
+// Constructor function one
+document.write("<h3>First Constructor Function</h3>")
+function Creature(ls){
+    this.lifeSpan = ls;
+}
+
+// method in creature prototype
+Creature.prototype.breath = function(){
+    document.write("Breathing (Creature Prototype Function)")
+}
+
+// object of Creature func
+let creature1 = new Creature(60);
+
+// Print life Span on document
+document.write("Life Span : ",creature1.lifeSpan,lineBreak)
+// print method
+document.write("Breath Function : ")
+creature1.breath();
+document.write(lineBreak);
+
+// console
+console.log("creature1 : ",creature1)
+
+
+// constructor function two
+document.write("<h3>2nd Constructor Function</h3>")
+
+function PerSon(f,n,a){
+    this.firstName = f;
+    this.lastName = n;
+    this.Age = a;
+}
+
+PerSon.prototype.fullName = function(){
+    document.write(this.firstName," ",this.lastName);
+}
+
+let perone = new PerSon("Mohsin","Shahid",24);
+let pertwo = new PerSon("Hassan","Shahid",23);
+
+// print per one
+document.write("Peron One Detail : "," First Name : ",perone.firstName," , ","Last Name : ",perone.lastName," , ","Age : ",perone.Age,lineBreak);
+document.write("Peron Two Detail : "," First Name : ",pertwo.firstName," , ","Last Name : ",pertwo.lastName," , ","Age : ",pertwo.Age,lineBreak);
+
+// print fullname func
+document.write("Full Name Person One: ");
+perone.fullName()
+document.write(lineBreak)
+document.write("Full Name Person Two: ");
+pertwo.fullName();
+
+// Console 
+console.log("Perone : ",perone)
+console.log("Pertwo : ",pertwo)
+
+// Prototype inheritance
+document.write("<h3>Prototype Inheritance</h3>")
+document.write("PerSon inherit the props and methods of Creature",lineBreak)
+
+PerSon.prototype.__proto__ = Creature.prototype
+ 
+document.write("<br>Now person prototype use the props and methods of creature prototype.",lineBreak)
+
+document.write("<br>Breath function inherited in PerSon Constructor Soooo : ")
+pertwo.breath();
+document.write(lineBreak)
+// document.write(creature1.lifeSpan)
+
+// console perone
+console.log("Perone inherit Method From Creature : ",perone)
+
+document.write("<h4>This Process is also called prototype chaning</h4>")
+
