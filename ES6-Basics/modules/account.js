@@ -4,7 +4,7 @@ let acountNo = 12346890;
 let accountType = "Current";
 
 function withdraw(){
-    console.log("Cash Withdraw")
+    console.log("Account Function Cash Withdraw")
 }
 
 function deposite(){

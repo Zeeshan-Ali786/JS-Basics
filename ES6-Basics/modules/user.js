@@ -14,3 +14,17 @@ function code(){
     console.log("Coding...")
 }
 
+// function ith same name asin account js file so when we import it we change its name check in module.js
+export function withdraw(){
+    console.log("User Function Cash Withdraw")
+}
+
+
+
+// import deposite from account.js here in same folder and then use that in module.js
+import { deposite } from "./account.js";
+
+export function userAccount(){
+    console.log("Calling Deposite from user.js But it is the function of account.js and imported in user.js")
+    deposite();
+}
