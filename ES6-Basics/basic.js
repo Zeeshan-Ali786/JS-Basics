@@ -282,3 +282,31 @@ add(33,13, function(){
     document.write("Anonomous Function...")
 });
 
+
+
+                        //Map Function
+document.write("<h3>11. Map Function</h3>")
+
+let array1 = [1, 2, 3, 4, 5];
+// Problem : Double this array like [2, 4, 6, 8, 10]
+
+// normal way
+let arrDouble = [];
+
+for(let i=0; i<array1.length; i++){
+    arrDouble[i] = array1[i] * 2; 
+}
+document.write("Double of Array : ",arrDouble);
+
+//Reason why using MAp function : performing operation on every element of an aray and store result on another array
+document.write("<br><b>Reason why using MAp function :</b> performing operation on every element of an aray and store result on another array<br>")
+
+// let arrDoubleMap = array1.map(function(val){
+//     return val*2;
+// })
+
+// Arrow function with anonomous function
+let arrDoubleMap = array1.map((val) => val*2);
+
+document.write("<br>Double of Array (by using Map Function) : ")
+document.write(arrDoubleMap);
