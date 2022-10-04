@@ -156,6 +156,8 @@ document.write("<br>Solution (Array return) : Book Price = ",bookPrice)
 
 document.write("<h4>If function returns us Array then we use Array Destructuring.</h4>");
 
+
+
                         // Object Destructuring
 document.write("<h3>8. Object Destructuring</h3>")
 let book2 = {
@@ -193,3 +195,61 @@ document.write("<br>Book Price = ",price2)
 // change name from pubName to publisher
 document.write("<br>Book Publisher = ",publisher)
 document.write("<br>Book Publish Year = ",pubYear)
+
+
+
+                        //Arrow Function 
+document.write("<h3>9. Arrow Function</h3>")
+// normal Function
+function sum(a,b){
+    return a + b;
+}
+
+// Arrow Function with multiple statement
+let sum2 = (a,b) => {
+    a = 2*a;
+    return a + b;
+}
+
+// If Arrow Function hanve only one statement and that statement must be return something then we write arrow function like this
+let sum3 = (a,b) => a + b;
+
+// if we have only one parameter
+let double = a => 2*a;
+
+// if there is no parameter
+let random = () => Math.random();  //if 0 parameter then we write paranthesis
+
+// Anonamous Function (when no function need of name)
+// normal
+// document.addEventListener('click',function(){
+//     console.log("Clicked....")
+// })
+// Arrow Anonomous function
+document.addEventListener('click', () => console.log("Clicked...."));
+
+
+    // Print
+document.write("Normal Function : ");
+document.write(sum(2,3));
+
+// Arrow with multiple statement
+document.write("<br>Arrow Function (with multiple Statement) : ");
+document.write(sum2(2,3));
+
+// Arrow with only one return statement
+document.write("<br>Arrow Function (with one return statement) : ");
+document.write(sum3(2,3));
+
+// Only one Parameter
+document.write("<br>Arrow Function (if we have only one parameter we remove prenthesis) : ");
+document.write(double(2));
+
+// there is no parameter
+document.write("<br>Arrow Function (if there is no parameter only use prenthesis) : ");
+document.write(random());
+
+// Anonamous Function
+document.write("<br>Arrow Anonomous Function (click on document and check in console) : ");
+
+
