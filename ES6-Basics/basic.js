@@ -306,7 +306,57 @@ document.write("<br><b>Reason why using MAp function :</b> performing operation 
 // })
 
 // Arrow function with anonomous function
-let arrDoubleMap = array1.map((val) => val*2);
+let arrDoubleMap = array1.map(val => val*2);
 
 document.write("<br>Double of Array (by using Map Function) : ")
 document.write(arrDoubleMap);
+
+
+
+                        // Filter Function
+document.write("<h3>12. Filter Function</h3>")
+
+let array2 = [3, 55, 23, 9, 21, 4, 10, 11, 67, 2];
+// problem : print numbers that is greater then 10
+
+let arrFilter = array2.filter(val => val > 10);
+document.write("Numbers that is greater then 10 : ",arrFilter);
+
+// Example 2
+document.write("<h4>Example 2</h3>")
+let objectArray = [
+    {
+        name : "Zeeshan",
+        position : "Developer"
+    },
+    {
+        name : "Mohsin",
+        position : "Mobile Automation"
+    },
+    {
+        name : "Adeel",
+        position : "Designer"
+    },
+    {
+        name : "Waqas",
+        position : "Developer"
+    },
+    {
+        name : "Khalil",
+        position : "Django Developer"
+    },
+    {
+        name : "Hassan",
+        position : "Developer"
+    },
+    {
+        name : "Tahir",
+        position : "Designer"
+    },
+]
+// problem : filter all developer
+
+let devFilter = objectArray.filter(val => val.position == "Developer");
+
+document.write("filter all developer : Check in console")
+console.log("Filter Function : ",devFilter);
