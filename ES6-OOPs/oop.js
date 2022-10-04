@@ -152,3 +152,90 @@ empl1.getName();
 console.log(`
 private function must be called in public function and then public function called here : `)
 empl1.pubfun();
+
+
+
+
+                        // Mixin
+console.log(`
+            Mixin (to give extra power to any class)`)
+
+// object Mixin 1
+let objMethod = {
+    sayhi(){
+        console.log("Hi...")
+    },
+
+    sayby(){
+        console.log("Bye...")
+    }
+}
+
+// object Mixin 2
+let objMethod2 = {
+    sayhi2(){
+        console.log("Hi...Mixin 2")
+    },
+
+    sayby2(){
+        console.log("Bye...Mixin 2")
+    }
+}
+
+// class 
+class user{
+    constructor(){
+        this.name = "Zeeshan";
+    }
+}
+
+// inheritance
+class userAdmin extends user{
+
+}
+
+let useradmin1 = new userAdmin();
+ console.log(useradmin1)
+
+// if you want inherite multiple thing then you can use extend and mixin 
+//  assign object methods to user class
+Object.assign(userAdmin.prototype, objMethod);   //mixin 1
+Object.assign(userAdmin.prototype, objMethod2);   //mixin 2
+
+// now obj of useradmin class access the methods inside objMethod object
+console.log(`now obj of userAdmin class access the methods inside objMethod object and user class constructor`)
+
+// Mixin 1
+console.log(`
+        Mixin 1`)
+
+console.log(`
+say hi Method : `)
+useradmin1.sayhi()
+
+console.log(`
+say Bye Method : `)
+useradmin1.sayby()
+
+// Mixin 2
+console.log(`
+        Mixin 2`)
+
+console.log(`
+say hi Method : `)
+useradmin1.sayhi2()
+
+console.log(`
+say Bye Method : `)
+useradmin1.sayby2()
+
+
+// Conclusion
+console.log(`
+            Conclusion
+
+In Extends : 
+we only can extend one class
+
+In Mixn : 
+we can mixin multiple things`)
