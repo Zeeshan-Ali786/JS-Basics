@@ -222,9 +222,11 @@ let random = () => Math.random();  //if 0 parameter then we write paranthesis
 
 // Anonamous Function (when no function need of name)
 // normal
+
 // document.addEventListener('click',function(){
 //     console.log("Clicked....")
 // })
+
 // Arrow Anonomous function
 document.addEventListener('click', () => console.log("Clicked...."));
 
@@ -252,4 +254,31 @@ document.write(random());
 // Anonamous Function
 document.write("<br>Arrow Anonomous Function (click on document and check in console) : ");
 
+
+                        //Callback Function
+document.write("<h3>10. Callback Function</h3>")
+
+// pass function into another function as a parameter
+function add(num1, num2, callback){
+    document.write("Add : ",num1+num2);
+    document.write("<br>pass function into another function as a parameter or we can change function by changing parameter")
+    document.write("<br>Function : ");
+    callback();
+}
+
+// function hello
+function sayhelo(){
+    document.write("Hello Function....<br><br>")
+}
+function sayhy(){
+    document.write("hy Function....<br><br>")
+}
+
+add(10,20,sayhelo);
+
+add(23,11,sayhy);
+
+add(33,13, function(){
+    document.write("Anonomous Function...")
+});
 
