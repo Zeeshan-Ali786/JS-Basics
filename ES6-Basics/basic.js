@@ -360,3 +360,45 @@ let devFilter = objectArray.filter(val => val.position == "Developer");
 
 document.write("filter all developer : Check in console")
 console.log("Filter Function : ",devFilter);
+
+
+
+                        // Web Storage (Local Storage and Session Storage)
+document.write("<h3>13. Web Storage (Local Storage and Session Storage)</h3>")
+// local storage
+// Capacity : 10mb
+// it cant expire it could be deleted
+
+// session storage
+// Capacity : 5mb
+// expire by closing tab
+
+        // Local Storage
+// localStorage.setItem('name','value')
+// Set
+localStorage.setItem('FirstName','Zeeshan');
+localStorage.setItem('Location','Lahore');
+
+//Get 
+document.write("<br><b>Local Storage : </b>")
+document.write("<br>Value of FirstName in local storage : ",localStorage.getItem('FirstName'))
+document.write("<br>Value of Location in local storage : ",localStorage.getItem('Location'))
+
+// Remove
+localStorage.removeItem('FirstName')
+
+        // Session Storage
+document.write("<br><br><b>Session Storage (same as Local but it expires when tab close) : </b>")
+
+// Set
+sessionStorage.setItem('FirstName','Khalil');
+sessionStorage.setItem('Location','Karachi');
+
+//Get 
+document.write("<br>Value of FirstName in local storage : ",sessionStorage.getItem('FirstName'))
+document.write("<br>Value of Location in local storage : ",sessionStorage.getItem('Location'))
+
+// Remove
+sessionStorage.removeItem('FirstName')
+
+// Today : ES6-OOPs(Class, Inheritance, Public & Private Property, Mixin) and Arrow Callback map and Filter Functions and Local or Session Storage
