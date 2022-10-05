@@ -1,0 +1,69 @@
+#heading{
+    border: 1px solid #dadce0;
+    width: 30%;   
+    border-radius: 3px;
+    padding: 0 7px 4px 7px;
+    text-align: center;
+    margin-left: 2rem;
+    background: #f8f9fa;
+
+}
+#container{
+    /* display: grid; */
+    margin-left: 2rem;
+    width: 30%;
+    /* justify-content: center;
+    align-items: center; */
+    /* text-align: center; */
+}
+
+
+/* Grids */
+.grid {
+    display: grid;
+  }
+.grid--cols-2{
+    grid-template-columns: repeat(1, 45% 55%);
+}
+.grid--cols-3 {
+    grid-template-columns: repeat(1, 45% 10% 45%);
+}
+
+
+.inp{
+    width: 99%;
+    /* margin: 0 4rem 0 2rem; */
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 2px;
+    border: 1px solid #dadce0;
+
+}
+.inp:focus{
+    outline: none;
+
+}
+
+.input-label-1, .input-label-2{
+    border: 1px solid #dadce0;
+    padding: 5px 75.5% 1px 5px;
+    /* margin-left: 2rem; */
+    padding-bottom: 5px;
+    /* margin-bottom: 2rem; */
+    border-radius: 2px;
+    background: #f8f9fa;
+}
+.input-label-2{
+    padding: 5px 66.2% 1px 5px;
+    padding-bottom: 5px;
+}
+
+/* Equal Sign */
+.equal-sign{
+    font-size: 27px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1rem;
+    color: #7b7c7e;
+}
