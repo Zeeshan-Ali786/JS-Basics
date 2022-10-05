@@ -402,3 +402,69 @@ document.write("<br>Value of Location in local storage : ",sessionStorage.getIte
 sessionStorage.removeItem('FirstName')
 
 // Today : ES6-OOPs(Class, Inheritance, Public & Private Property, Mixin) and Arrow Callback map and Filter Functions and Local or Session Storage
+
+                        // JSON (JavaScript Object Notation)
+document.write("<h3>14. JSON (JavaScript Object Notation)</h3>")
+// transfer and store data in text form 
+// specially use for API(Server sa data lena or server ko dena) and for Config file
+// independent language
+// pehly JSON wala kam XML krta tha (JSON is faster,cleaner,light weight, easy to read/write)
+
+document.write("Check in data.json file in the same folder.")
+
+document.write("<br>JSON data store in variable.")
+let dataJson = `{
+    "name" : "Zeeshan",   
+    "age" : 22,
+    "is_Student" : true,
+    "passport_no" : null,
+    "p_languages" : ["HTML", "CSS", "JavaScript"],
+    "Address" : {
+        "city" : "Lahore",
+        "pincode" : 54000,
+        "house_no" : "E-916"
+    },
+
+    "group_of_students" : [
+        {
+            "name" : "Mohsin",   
+            "age" : 24  
+        },
+        {
+            "name" : "Ali",   
+            "age" : 27  
+        },
+        {
+            "name" : "Saqib",   
+            "age" : 25  
+        }
+    ]
+}`;     //this is JSON string (let supppose this data comes from server)
+
+// now we have to convert this JSON string into java script object by using JSON.parse
+
+let dataObject = JSON.parse(dataJson); //now our JSON string react like JS Object
+
+            // Fetch Data
+document.write("<h4>Data fetching</h4>");
+// Bracket notation uses here
+document.write("Name : ",dataObject['name']);
+document.write("<br>Age : ",dataObject['age']);
+document.write("<br>Is Student : ",dataObject['is_Student']);
+document.write("<br>Passport no : ",dataObject['passport_no']);
+document.write("<br>Programing Language : ",dataObject['p_languages'][2]);
+document.write("<br>Address (City): ",dataObject['Address']['city']);
+
+            // send data to the server
+let student = {
+    student_name : "Waqas",
+    student_age : 22,
+    student_city : "Lahore"
+}
+// first we convert this object into JSON string and themn send to server by using JSON.stringify(
+
+let jData = JSON.stringify(student); //object is converted to JSON string
+
+// Ab ham isko fetch API ya AJEX k through server pr bhej skty ha 
+
+console.log("JSON Data (Student) : " , jData);

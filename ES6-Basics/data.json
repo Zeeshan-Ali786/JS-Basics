@@ -1,0 +1,28 @@
+{
+    "name" : "Zeeshan",   
+    "age" : 22,
+    "is_Student" : true,
+    "passport_no" : null,
+    "p_languages" : ["HTML", "CSS", "JavaScript"],
+    "Address" : {
+        "city" : "Lahore",
+        "pincode" : 54000,
+        "house_no" : "E-916"
+    },
+
+    "group_of_students" : [
+        {
+            "name" : "Mohsin",   
+            "age" : 24  
+        },
+        {
+            "name" : "Ali",   
+            "age" : 27  
+        },
+        {
+            "name" : "Saqib",   
+            "age" : 25  
+        }
+    ]
+}
+
