@@ -1,0 +1,41 @@
+body{
+    padding: 20px 100px;
+}
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+img{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+p{
+    font-size: 20px;
+    text-align: justify;
+}
+
+.btn{
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    border: 1px solid gray;
+    border-radius: 100%;
+    cursor: pointer;
+}
+#color-switcher{
+    text-align: right;
+}
+
+#white{
+    background-color: white;
+}
+#aqua{
+    background-color: aquamarine;
+}
+#voilet{
+    background-color: #ce9aff;
+}
+#black{
+    background-color: #000;
+}
