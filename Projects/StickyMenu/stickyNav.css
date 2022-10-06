@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+}
+#header{
+    text-align: center;
+}
+#logo{
+    width: 250px;
+    height: auto;
+}
+#menu-bar{
+    background: cadetblue;
+    width: 100%;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+/* sticky */
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+.list{
+    /* list-style: none; */
+    display: inline;
+}
+
+.list-itm{
+    
+    font-size: 20px;
+    padding: 1rem 0;
+    display: inline-block;
+}
+.list-itm > a{
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    
+}
+.list-itm > a:hover{
+    background-color: rgb(34, 57, 58);
+    transition: 1s;
+}
+
+/* container */
+.about-us{
+    padding: 20px 100px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.about-us-img{
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.text{
+    padding: 20px 100px;
+    font-size: 20px;
+    text-align: justify;
+}

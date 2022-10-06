@@ -1,11 +1,11 @@
 body{
     padding: 20px 100px;
 }
-h1{
+.about-us{
     text-align: center;
     text-decoration: underline;
 }
-img{
+.about-us-img{
     width: 100%;
     height: auto;
     margin: 0 auto;

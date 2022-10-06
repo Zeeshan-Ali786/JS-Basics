@@ -4,19 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Changer</title>
-    <link rel="stylesheet" href="styleBack.css">
+    <title>Sticky Menu</title>
+    <link rel="stylesheet" href="stickyNav.css">
 </head>
 <body>
-    <div id="color-switcher">
-        <span class="btn" id="white" onclick="changeBG('#fff')"></span>
-        <span class="btn" id="aqua" onclick="changeBG('#7fffd4')"></span>
-        <span class="btn" id="voilet" onclick="changeBG('#ce9aff')"></span>
-        <span class="btn" id="black" onclick="changeBG('#000')"></span>
+    <div id="header">
+        <img src="nature-logo.png" id="logo" alt="Nature Logo">
     </div>
-    <h1 class="text about-us">About Us</h1>
+    <nav id="menu-bar" class="">
+        <ul class="list">
+            <li class="list-itm"><a href="">Home</a></li>
+            <li class="list-itm"><a href="">About us</a></li>
+            <li class="list-itm"><a href="">Our Team</a></li>
+            <li class="list-itm"><a href="">Client</a></li>
+            <li class="list-itm"><a href="">Contact Us</a></li>
+        </ul>
+    </nav>
 
-    <img class="about-us-img" src="about.jpg" alt="About us Image">
+    <!-- copy from background changer -->
+    <h1 class="about-us">About Us</h1>
+
+    <img class="about-us-img" src="../BackgroundChanger/about.jpg" alt="About us Image">
 
     <p class="text">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aliquid sunt voluptate dolore aperiam architecto 
@@ -46,6 +54,7 @@
         repellat eveniet vero amet quaerat animi natus, velit, corrupti qui. Aliquid libero facere et explicabo porro! Blanditiis eligendi sunt soluta culpa dolorum.
     </p>
 
-    <script src="scriptBack.js"></script>
+    <!-- script -->
+    <script src="stickyNav.js"></script>
 </body>
 </html>
