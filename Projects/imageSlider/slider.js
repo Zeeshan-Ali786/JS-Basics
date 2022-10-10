@@ -47,6 +47,18 @@ function slideshow(num){
     console.log(dots[num])
 
 
+
+    let textContainer = document.getElementsByClassName('inside-portfolio-image');
+   
+    for(let x of textContainer){
+     x.style.right = "100%";
+     x.style.transform = "translateX(100%)";
+     console.log("Inside Portfolio image",x);
+    }
+    textContainer[x].style.right = "-100%";
+    textContainer[x].style.transform = "translateX(-100%)";
+    textContainer[x].style.transition = "1s"
+    
 }
 slideshow(flag)
 
@@ -74,6 +86,8 @@ function slideDot(x){
 
     console.log(dotslide[x])
     console.log(dots[x])
+
+
 
 }
 slideDot(dot)
